@@ -85,7 +85,6 @@ function Timeline() {
           </div>
         </div>
       </div>
-      <p className="hint">💡 Add your memory photos to <code>public/memories/</code> folder (e.g., memory1.jpg, memory2.jpg, etc.)</p>
     </section>
   );
 }

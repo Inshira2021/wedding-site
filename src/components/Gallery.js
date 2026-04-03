@@ -70,8 +70,6 @@ function Gallery() {
           onClose={() => setActiveCategory(null)}
         />
       )}
-
-      <p className="hint">You can add image URLs (hosted or data URLs). These are saved locally in your browser.</p>
     </section>
   );
 }

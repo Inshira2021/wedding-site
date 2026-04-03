@@ -15,7 +15,7 @@ function App() {
       </main>
 
       <footer className="site-footer">
-        <p>Digital memory • A love story • A surprise gift</p>
+        <p></p>
       </footer>
     </div>
   );
