@@ -339,10 +339,23 @@ body { margin: 0; font-family: Inter, system-ui, -apple-system, 'Segoe UI', Robo
 
 /* Secret portal */
 .secret-btn { background:linear-gradient(90deg,#ffd166,#ffb4b4); border-radius:10px; padding:10px 12px; cursor:pointer }
-.portal-modal { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; z-index:60 }
-.portal-card { background:linear-gradient(135deg,#fff8ee,#fff1f4); padding:22px; border-radius:14px; box-shadow:0 20px 40px rgba(0,0,0,0.12); max-width:720px; text-align:center; color: #000; }
+.portal-modal { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; z-index:60; padding:20px; overflow-y:auto; }
+.portal-card { background:linear-gradient(135deg,#fff8ee,#fff1f4); padding:22px; border-radius:14px; box-shadow:0 20px 40px rgba(0,0,0,0.12); max-width:720px; max-height:90vh; overflow-y:auto; text-align:center; color: #000; }
 .portal-card h2 { margin:0 0 8px 0; color: #000; }
-.portal-card p { color: #000; }
+.portal-card p { color: #000; word-wrap: break-word; overflow-wrap: break-word; white-space: pre-wrap; line-height: 1.7; letter-spacing: 0.3px; margin: 0 0 16px 0; }
+
+@media (max-width: 768px) {
+  .portal-card { max-width: 90vw; max-height: 85vh; padding: 16px; }
+  .portal-card h2 { font-size: 1.3rem; margin-bottom: 12px; }
+  .portal-card p { font-size: 0.95rem; line-height: 1.5; }
+}
+
+@media (max-width: 480px) {
+  .portal-modal { padding: 16px; }
+  .portal-card { max-width: 95vw; max-height: 80vh; padding: 14px; }
+  .portal-card h2 { font-size: 1.1rem; }
+  .portal-card p { font-size: 0.9rem; }
+}
 
 .site-footer { text-align:center; padding:24px; color:var(--muted) }
 
