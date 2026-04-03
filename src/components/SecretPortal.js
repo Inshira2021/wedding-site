@@ -4,7 +4,7 @@ function SecretPortal() {
   const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState(false);
 
-  const message = `My dearest love,\n\nFrom the moment you entered my life, my heart has known a new kind of happiness. You brought smiles not only to my face, but deep into my soul.\n\nEvery day with you feels warmer, brighter, and more meaningful. And now, as I look forward to becoming your wife, my heart overflows with love and gratitude.\n\nI am so proud to be yours — today, tomorrow, and forever.\n\nAlways yours.`;
+  const message = `My dearest love,\n\nFrom the moment you entered my life, my heart has known a new kind of happiness. You brought smiles not only to my face, but deep into my soul.\n\nAs I look forward to becoming your wife, my heart overflows with love and gratitude.\n\nI am so proud to be yours — today, tomorrow, and forever.\n\nAlways yours.`;
 
   function copyMessage() {
     const text = message;
