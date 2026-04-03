@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 
 function computeRemaining(target) {
   const now = new Date();
@@ -12,7 +12,7 @@ function computeRemaining(target) {
 }
 
 function Countdown({ year = 2026, month = 5, day = 7 }) {
-  const target = new Date(year, month - 1, day, 10, 0, 0);
+  const target = useMemo(() => new Date(year, month - 1, day, 10, 0, 0), [year, month, day]);
   const [timeLeft, setTimeLeft] = useState(() => computeRemaining(target));
 
   useEffect(() => {

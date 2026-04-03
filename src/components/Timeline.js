@@ -19,7 +19,7 @@ const moments = [
 
 function Timeline() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlay, setIsAutoPlay] = useState(true);
+  const [isAutoPlay] = useState(true);
   const [imageDimensions, setImageDimensions] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
