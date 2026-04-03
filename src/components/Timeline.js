@@ -20,7 +20,6 @@ const moments = [
 function Timeline() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlay] = useState(true);
-  const [imageDimensions, setImageDimensions] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
     if (!isAutoPlay) return;
@@ -32,13 +31,6 @@ function Timeline() {
 
   const goToIndex = (index) => {
     setCurrentIndex(index);
-  };
-
-  const handleImageLoad = (e) => {
-    setImageDimensions({
-      width: e.currentTarget.naturalWidth,
-      height: e.currentTarget.naturalHeight
-    });
   };
 
   const currentMoment = moments[currentIndex];
@@ -57,7 +49,6 @@ function Timeline() {
                 src={currentMoment.photo} 
                 alt={currentMoment.title} 
                 onError={(e) => { e.currentTarget.style.display = 'none'; }}
-                onLoad={handleImageLoad}
               />
               <div className="carousel-overlay"></div>
             </div>
@@ -80,8 +71,7 @@ function Timeline() {
             </div>
           </div>
           <div className="carousel-counter">
-            <div><span>{currentIndex + 1}</span> / <span className="total">{moments.length}</span></div>
-            {imageDimensions.width > 0 && <div style={{fontSize: '0.8rem', marginTop: '6px', opacity: 0.8}}>📷 {imageDimensions.width} × {imageDimensions.height}</div>}
+            <span>{currentIndex + 1}</span> / <span className="total">{moments.length}</span>
           </div>
         </div>
       </div>
